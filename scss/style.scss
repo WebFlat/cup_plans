@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,500,700');
+@import 'normalize';
+
+$price-color: #02995b;
+$text-color: #333333;
+
+
+
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	height: 100%;
+}
+
+body{
+	min-height: 100%;
+	font-size: 2rem;
+	line-height: 1;
+	color: #333;
+	font-family: 'Lato', sans-serif;
+}
+.container {
+	height: 100vh;
+	width: 100%;
+	background-color: #191919;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	background-color: #fdde7e;
+	width: 1200px;
+	max-width: 90%;
+	// max-height: 600px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5% 2%;
+	justify-content: space-between;
+	&__item {
+		// outline: 1px solid red;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #fff;
+		flex-basis: 360px;
+		max-width: 360px;
+		// max-height: 440px;
+		text-align: center;
+		padding: 40px 0;
+		transition: all .3s ease-in;
+		cursor: pointer;
+		&:hover {
+			transform: scaleY(1.12); 
+		}
+		// &--active {
+		// 	transform: scaleY(1.1); 
+		// }
+	}
+	&__price {
+		color: $price-color;
+		font-size: 7rem;
+		font-weight: 700;
+		margin-bottom: 20px;
+		&:before {
+			content: "\0024";
+		}
+	}
+	&__title {
+		margin: 30px 0;
+		font-weight: 500;
+		font-size: 5.6rem;
+		max-width: 90%;
+		text-overflow: ellipsis;
+		white-space: wrap;
+		overflow: hidden;
+	}
+	&__text {
+		margin: 0;
+		font-size: 2rem;
+		font-weight: 300;
+		line-height: 1.2;
+		color: $text-color;
+		max-width: 70%;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	&__img {
+		max-height: 40%;
+		max-width: 40%;
+	}
+}
+
