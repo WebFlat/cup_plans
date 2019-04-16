@@ -27,46 +27,47 @@ body{
 .container {
 	height: 100vh;
 	width: 100%;
-	background-color: #191919;
+	padding: 2% 12%;
+	background-color: #fdde7e;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .card {
-	background-color: #fdde7e;
-	width: 1200px;
-	max-width: 90%;
-	// max-height: 600px;
+	width: 100%;
 	display: flex;
-	flex-wrap: wrap;
-	padding: 5% 2%;
-	justify-content: space-between;
-	&__item {
+	flex-wrap: nowrap;
+	padding: 5% 1%;
+	justify-content: space-around;
+}
+.cards {
 		// outline: 1px solid red;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		margin: 20px; 
 		background-color: #fff;
 		flex-basis: 360px;
-		max-width: 360px;
-		// max-height: 440px;
+		min-width: 210px;
 		text-align: center;
-		padding: 40px 0;
+		padding: 40px 10px;
 		transition: all .3s ease-in;
 		cursor: pointer;
+		border-radius: 10px;
 		&:hover {
-			transform: scaleY(1.12); 
+			transform: scale(1.16); 
 		}
-		// &--active {
-		// 	transform: scaleY(1.1); 
-		// }
-	}
 	&__price {
 		color: $price-color;
 		font-size: 7rem;
 		font-weight: 700;
 		margin-bottom: 20px;
+		max-width: 95%;
+		max-height: 75px;
+		text-overflow: ellipsis;
+		white-space: wrap;
+		overflow: hidden;
 		&:before {
 			content: "\0024";
 		}
@@ -75,7 +76,8 @@ body{
 		margin: 30px 0;
 		font-weight: 500;
 		font-size: 5.6rem;
-		max-width: 90%;
+		max-width: 95%;
+		max-height: 60px;
 		text-overflow: ellipsis;
 		white-space: wrap;
 		overflow: hidden;
